@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 0
 spring:
   security:
     oauth2:
@@ -11,3 +11,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8010/eureka
+  instance:
+    instance-id: ${spring.application.name}:${instanceID:${random.value}}
